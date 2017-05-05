@@ -1,0 +1,232 @@
+/* reset */
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select { margin:0; padding:0;}
+*{
+    -webkit-box-sizing: border-box;  /*以border计算宽度*/
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+em { font-style:normal; }
+li { list-style:none; }
+a { text-decoration:none; }
+img { border:none; vertical-align:top; }
+table { border-collapse:collapse; }
+input,textarea { outline:none; }
+textarea { resize:none; overflow:auto; }
+body { font-size:12px; font-family:"微软雅黑"; }
+/* end reset */
+
+/*public*/
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    zoom:1;
+}
+.clear::after,.clear::before{
+    content: '.';
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+/*颜色渐变*/
+.gradient{
+    width: 300px;
+    height: 200px;
+    background: -webkit-linear-gradient(top,#FFFFFF,#f8f8f8);
+    background: -moz-linear-gradient(top,#FFFFFF,#f8f8f8);
+    background: -ms-linear-gradient(top,#FFFFFF,#f8f8f8);
+    background: linear-gradient(top,#FFFFFF,#f8f8f8);
+    -ms-filter:"progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#FFFFFF, endColorstr=#f8f8f8)";
++background:#f9f9f9;   /*ie9渐变用滤镜方式*/
++ background: #f9f9f9; /*不支持浏览器用中间色替代*/
+}
+/*三角形公共样式*/
+.triangle_up,.triangle_down_red,.triangle_down_gray{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    border-left: 4px solid transparent;
+    border-right:4px solid transparent;
+}
+.triangle_up{
+    border-bottom:4px solid #ca0309;
+}
+.triangle_down_red{
+    border-top:4px solid #ca0309;
+}
+.triangle_down_gray{
+    border-top:4px solid #c4bdbd;
+}
+
+
+
+/*公共独立模块样式*/
+
+
+
+/*二级标题*/
+.sec_title{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.sec_title strong{
+    color: #cc0d13;
+    font-family: Arial;
+    font-size: 12px;
+}
+.sec_title span{
+    color: #000;
+}
+.sec_title a{
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+.sec_title sup{
+    position: absolute;
+    top: -2px;
+    left: 18px;
+}
+/*3个的选项菜单*/
+.tab{
+    height: 25px;
+    border-bottom: 1px solid #dadada;
+
+}
+.tab ul{
+}
+.tab ul li{
+    float: left;
+    height: 24px;
+    border: 1px solid #dadada;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    margin-right: -1px;
+    text-align: center;
+    line-height: 24px;
+    color: #666;
+    cursor: pointer;
+}
+.tab .active{
+    height: 25px;
+    background: #FFFFFF;
+    font-weight: bold;
+    color: #454545;
+}
+
+/*公共列表样式*/
+.public_list{
+
+ }
+.public_list li{
+    height: 27px;
+    border-bottom: 1px dotted #dadada;
+    background: url("../img/dot.gif") no-repeat 5px center;
+    line-height: 27px;
+}
+.public_list li:nth-last-child(1){
+    border-bottom: none;
+}
+.public_list li a{
+    color: #333;
+    display: block;
+    text-indent: 14px;
+}
+.public_list li a:hover{
+    color: red;
+}
+.public_list li a span{
+    color: #c75d61;
+}
+.public_list li a em{
+    color: #c3c3c3;
+}
+.public_list li .col1,.public_list li .col2{
+    float: left;
+}
+
+    /*折扣店*/
+.public_list .coupon_title{
+    background: none;
+}
+.public_list .coupon_title span{
+    text-align: center;
+    color: #999;
+}
+.section_coupon .col1{
+    width: 137px;
+}
+.section_coupon .col2{
+    width: 35px;
+}
+.section_coupon .col3,.section_coupon .col2{
+    text-align: center;
+}
+.section_coupon .col3{
+    width: 36px;
+}
+
+
+/*问题区域列表*/
+.question_list .col1{
+     width: 273px;
+}
+.question_list .col2{
+    width: 35px;
+}
+.question_list .coupon_title .col1,.question_list .col2{
+    text-align: center;
+}
+.question_list .col2 img{
+    position: relative;
+    top: 7px;
+}
+
+/*图片文字公共样式*/
+.pic_list{
+
+}
+.pic_list li{
+
+}
+.pic_list .img{
+    width: 96px;
+    height: 73px;
+    position: relative;
+    border: 1px solid #dadada;
+}
+.pic_list img{
+    padding: 2px;
+}
+
+.pic_list .img:hover{
+    border: 1px solid #b80000;
+}
+.pic_list .text{
+    width: 108px;
+}
+.pic_list .text h3 a{
+    color: #b80000;
+    font-weight: normal;
+    font-size: 12px;
+}
+.pic_list .text h3 a:hover{
+    text-decoration: underline;
+}
+.pic_list .text p{
+    color: #999;
+}
+.pic_list .text p a{
+    color: #666;
+}
+.pic_list .text p a:hover{
+    color: #b80000;
+    text-decoration: underline;
+}
